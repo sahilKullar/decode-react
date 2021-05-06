@@ -11,6 +11,12 @@ const Navigation = () => {
       <div className="item">
         <Link to={ROUTES.SEARCH}>Search</Link>
       </div>
+      <div className="item">
+        <Link to={ROUTES.COUNTER}>Counter</Link>
+      </div>
+      <div className="item">
+        <Link to={ROUTES.TODO}>Todo</Link>
+      </div>
       <div className="right menu">
         <div className="item">
           <Link to={ROUTES.LOGIN}>LOGIN</Link>
