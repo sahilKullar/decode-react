@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/sahilKullar/learn-reactjs/static/css/main.4be9c137.chunk.css",
+    "main.js": "/sahilKullar/learn-reactjs/static/js/main.0150fb75.chunk.js",
+    "main.js.map": "/sahilKullar/learn-reactjs/static/js/main.0150fb75.chunk.js.map",
+    "runtime-main.js": "/sahilKullar/learn-reactjs/static/js/runtime-main.50a5b81e.js",
+    "runtime-main.js.map": "/sahilKullar/learn-reactjs/static/js/runtime-main.50a5b81e.js.map",
+    "static/js/2.cc811672.chunk.js": "/sahilKullar/learn-reactjs/static/js/2.cc811672.chunk.js",
+    "static/js/2.cc811672.chunk.js.map": "/sahilKullar/learn-reactjs/static/js/2.cc811672.chunk.js.map",
+    "index.html": "/sahilKullar/learn-reactjs/index.html",
+    "static/css/main.4be9c137.chunk.css.map": "/sahilKullar/learn-reactjs/static/css/main.4be9c137.chunk.css.map",
+    "static/js/2.cc811672.chunk.js.LICENSE.txt": "/sahilKullar/learn-reactjs/static/js/2.cc811672.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50a5b81e.js",
+    "static/js/2.cc811672.chunk.js",
+    "static/css/main.4be9c137.chunk.css",
+    "static/js/main.0150fb75.chunk.js"
+  ]
+}
