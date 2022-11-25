@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useReducer } from "react";
 import { createContainer } from "react-tracked";
 
@@ -17,6 +18,7 @@ const reducer = (state, action) => {
     case "ADD_TODO":
       return {
         ...state,
+        // eslint-disable-next-line no-plusplus
         todos: [...state, { id: nextId++, title: action.title }],
       };
     case "DELETE_TODO":

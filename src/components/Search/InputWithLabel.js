@@ -36,9 +36,9 @@ const InputWithLabel = ({
         onChange={onInputChange}
         // onChange={handleChange}
       />
-      {/*<p>*/}
-      {/*  Searching for <strong>{searchTerm}</strong>*/}
-      {/*</p>*/}
+      {/* <p> */}
+      {/*  Searching for <strong>{searchTerm}</strong> */}
+      {/* </p> */}
     </>
   );
 };

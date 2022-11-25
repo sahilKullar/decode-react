@@ -1,7 +1,7 @@
 import React from "react";
+import axios from "axios";
 import List from "./List";
 // import InputWithLabel from "./components/InputWithLabel";
-import axios from "axios";
 import SearchForm from "./SearchForm";
 
 const API_ENDPOINT = "https://hn.algolia.com/api/v1/search?query=";

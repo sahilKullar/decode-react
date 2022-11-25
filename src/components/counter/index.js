@@ -61,11 +61,10 @@ const useFlasher = () => {
   return ref;
 };
 
-const {
-  useTracked: useGlobalState,
-  Provider: GlobalStateProvider,
-} = createContainer(useValue);
+const { useTracked: useGlobalState, Provider: GlobalStateProvider } =
+  createContainer(useValue);
 
+// eslint-disable-next-line react/prop-types
 const Counter = ({ name }) => {
   // const [state, setState] = useGlobalState();
   const [state, dispatch] = useGlobalState();
@@ -83,10 +82,13 @@ const Counter = ({ name }) => {
 
   return (
     <div ref={useFlasher()}>
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label>{state[name]} </label>
+      {/* eslint-disable-next-line react/button-has-type */}
       <button style={{ marginLeft: "5px" }} onClick={doIncrement}>
         +1
       </button>
+      {/* eslint-disable-next-line react/button-has-type */}
       <button style={{ marginLeft: "5px" }} onClick={doDecrement}>
         -1
       </button>
@@ -94,19 +96,17 @@ const Counter = ({ name }) => {
   );
 };
 
-const App = () => {
-  return (
-    <div className="ui raised very padded text container segment container">
-      <GlobalStateProvider>
-        <h1 className="ui header headline-primary">Count1</h1>
-        <Counter name="count1" />
-        <Counter name="count1" />
-        <h1 className="ui header headline-primary">Count2</h1>
-        <Counter name="count2" />
-        <Counter name="count2" />
-      </GlobalStateProvider>
-    </div>
-  );
-};
+const App = () => (
+  <div className="ui raised very padded text container segment container">
+    <GlobalStateProvider>
+      <h1 className="ui header headline-primary">Count1</h1>
+      <Counter name="count1" />
+      <Counter name="count1" />
+      <h1 className="ui header headline-primary">Count2</h1>
+      <Counter name="count2" />
+      <Counter name="count2" />
+    </GlobalStateProvider>
+  </div>
+);
 
 export default App;

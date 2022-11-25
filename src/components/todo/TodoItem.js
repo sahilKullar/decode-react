@@ -1,6 +1,6 @@
 import React from "react";
-const TodoItem = ({ id, title, completed }) => {
-  return <div>New TodoItem</div>;
-};
+
+// eslint-disable-next-line no-unused-vars
+const TodoItem = ({ id, title, completed }) => <div>New TodoItem</div>;
 
 export default TodoItem;
