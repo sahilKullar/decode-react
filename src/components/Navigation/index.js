@@ -16,6 +16,9 @@ const Navigation = () => (
     <div className="item">
       <Link to={ROUTES.TODO}>Todo</Link>
     </div>
+    <div className="item">
+      <Link to={ROUTES.TIPCALCULATOR}>Tip Calculator</Link>
+    </div>
     <div className="right menu">
       <div className="item">
         <Link to={ROUTES.LOGIN}>LOGIN</Link>

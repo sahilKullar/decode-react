@@ -5,6 +5,7 @@ import * as ROUTES from "../../constants/routes";
 import Search from "../Search";
 import Counter from "../Counter";
 import Todo from "../Todo";
+import TipCalculator from "../TipCalculator";
 
 const App = () => (
   <>
@@ -13,6 +14,7 @@ const App = () => (
       <Route exact path={ROUTES.SEARCH} element={<Search />} />
       <Route exact path={ROUTES.COUNTER} element={<Counter />} />
       <Route exact path={ROUTES.TODO} element={<Todo />} />
+      <Route exact path={ROUTES.TIPCALCULATOR} element={<TipCalculator />} />
     </Routes>
   </>
 );

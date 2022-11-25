@@ -1,0 +1,22 @@
+.tip-container {
+    background-color: lightgray;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.tip-container label {
+    display: block;
+    font-weight: bold;
+}
+
+.tip-container input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.tip-container p {
+    text-align: right;
+}
