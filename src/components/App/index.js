@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Navigation from "../Navigation";
 import * as ROUTES from "../../constants/routes";
 import Search from "../Search";
-import Counter from "../counter";
-import Todo from "../todo";
+import Counter from "../Counter";
+import Todo from "../Todo";
 
 const App = () => (
   <>
