@@ -6,6 +6,7 @@ import Search from "../Search";
 import Counter from "../Counter";
 import Todo from "../Todo";
 import TipCalculator from "../TipCalculator";
+import QuestionList from "../QuestionList";
 
 const App = () => (
   <>
@@ -15,6 +16,7 @@ const App = () => (
       <Route exact path={ROUTES.COUNTER} element={<Counter />} />
       <Route exact path={ROUTES.TODO} element={<Todo />} />
       <Route exact path={ROUTES.TIPCALCULATOR} element={<TipCalculator />} />
+      <Route exact path={ROUTES.QUESTION} element={<QuestionList />} />
     </Routes>
   </>
 );
