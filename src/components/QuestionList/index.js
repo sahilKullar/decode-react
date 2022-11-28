@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-const QUESTIONS_API_BASE_URL = "https://api.frontendexpert.io/api/fe/questions";
-const SUBMISSIONS_API_BASE_URL =
-  "https://api.frontendexpert.io/api/fe/submissions";
-
 function useQuestionsAndSubmissions() {
   const [questions, setQuestions] = useState([]);
   const [submissions, setSubmissions] = useState([]);
@@ -11,8 +7,8 @@ function useQuestionsAndSubmissions() {
   useEffect(() => {
     const fetchData = async () => {
       const [questionsResponse, submissionsResponse] = await Promise.all([
-        fetch(QUESTIONS_API_BASE_URL),
-        fetch(SUBMISSIONS_API_BASE_URL),
+        fetch("./questions.json"),
+        fetch("./submissions.json"),
       ]);
       const [question, submission] = await Promise.all([
         questionsResponse.json(),
