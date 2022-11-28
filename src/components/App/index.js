@@ -7,6 +7,8 @@ import Counter from "../Counter";
 import Todo from "../Todo";
 import TipCalculator from "../TipCalculator";
 import QuestionList from "../QuestionList";
+import Fetcher from "../Fetcher";
+import Scout from "../Scout";
 
 const App = () => (
   <>
@@ -17,6 +19,8 @@ const App = () => (
       <Route exact path={ROUTES.TODO} element={<Todo />} />
       <Route exact path={ROUTES.TIPCALCULATOR} element={<TipCalculator />} />
       <Route exact path={ROUTES.QUESTION} element={<QuestionList />} />
+      <Route exact path={ROUTES.FETCHER} element={<Fetcher />} />
+      <Route exact path={ROUTES.SCOUT} element={<Scout />} />
     </Routes>
   </>
 );

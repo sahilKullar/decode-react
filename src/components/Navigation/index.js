@@ -22,6 +22,12 @@ const Navigation = () => (
     <div className="item">
       <Link to={ROUTES.QUESTION}>Question List</Link>
     </div>
+    <div className="item">
+      <Link to={ROUTES.FETCHER}>Fetcher</Link>
+    </div>
+    <div className="item">
+      <Link to={ROUTES.SCOUT}>Scout</Link>
+    </div>
     <div className="right menu">
       <div className="item">
         <Link to={ROUTES.LOGIN}>LOGIN</Link>
