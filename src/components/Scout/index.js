@@ -1,6 +1,8 @@
 import React from "react";
+import List from "./List";
+import Search from "./Search";
 
-const list = [
+const stories = [
   {
     title: "React",
     url: "https://reactjs.org/",
@@ -22,31 +24,9 @@ const list = [
 export default function Scout() {
   return (
     <div>
-      <label htmlFor="search">
-        Search:
-        <input type="text" id="search" />
-      </label>
+      <Search />
       <hr />
-      {list.map((item) => (
-        <div key={item.objectID}>
-          <List item={item} />
-        </div>
-      ))}
+      <List list={stories} />
     </div>
-  );
-}
-
-// eslint-disable-next-line camelcase
-function List(props) {
-  // eslint-disable-next-line react/destructuring-assignment,camelcase
-  const { url, author, num_comments, points } = props.item;
-  return (
-    <>
-      <span>{url}</span>
-      <span>{author}</span>
-      {/* eslint-disable-next-line camelcase */}
-      <span>{num_comments}</span>
-      <span>{points}</span>
-    </>
   );
 }
