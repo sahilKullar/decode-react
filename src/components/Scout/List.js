@@ -1,11 +1,7 @@
 // eslint-disable-next-line camelcase
+import Item from "./Item";
+
 export default function List({ list }) {
-  return list.map(({ objectID, ...item }) => (
-    <div key={objectID}>
-      <span>{item.title}</span>
-      <span>{item.author}</span>
-      <span>{item.num_comments}</span>
-      <span>{item.points}</span>
-    </div>
-  ));
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return list.map(({ objectID, ...item }) => <Item key={objectID} {...item} />);
 }

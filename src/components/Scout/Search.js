@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import InputWithLabel from "./InputWithLabel";
 
-export default function Search({ onSearch }) {
-  const [searchTerm, setSearchTerm] = useState("");
+export default function Search({ search, onSearch }) {
   const handleChange = (e) => {
-    setSearchTerm(e.target.value);
     onSearch(e);
   };
 
   return (
-    <>
-      <label htmlFor="search">
-        Search:
-        <input type="text" id="search" onChange={handleChange} />
-      </label>
-      <p>Searching for {searchTerm}</p>
-    </>
+    // <label htmlFor="search">
+    //   Search:
+    //   <input type="text" id="search" value={search} onChange={handleChange} />
+    // </label>
+    <InputWithLabel
+      id="search"
+      label="Search"
+      value={search}
+      onInputChange={handleChange}
+    />
   );
 }

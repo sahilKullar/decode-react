@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import List from "./List";
 import Search from "./Search";
+import { useSemiPersistentState } from "./CustomeState";
 
 export default function Scout() {
   const stories = [
@@ -22,16 +23,31 @@ export default function Scout() {
     },
   ];
 
+  const [searchTerm, setSearchTerm] = useSemiPersistentState("search", "react");
+
+  // const [searchTerm, setSearchTerm] = useState(
+  //   localStorage.getItem("search") || "React"
+  // );
+
+  useEffect(() => {
+    localStorage.setItem("search", searchTerm);
+  }, [searchTerm]);
+
   const handleSearch = (e) => {
-    console.log(e.target.value);
+    setSearchTerm(e.target.value);
   };
+
+  const searchedStories = stories.filter((story) =>
+    story.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
       <h1>My Hacker stories</h1>
-      <Search onSearch={handleSearch} />
+      <Search search={searchTerm} onSearch={handleSearch} />
+      <p>Searching for {searchTerm}</p>
       <hr />
-      <List list={stories} />
+      <List list={searchedStories} />
     </div>
   );
 }
